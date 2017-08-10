@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 import settings
-from pipelines import DatabasePipeline
+#from pipelines import DatabasePipeline
 
 chatbot = ChatBot("Risk Bot", storage_adapter="chatterbot.storage.SQLStorageAdapter")
 #if you want to disable the learning feature, set read_only=True as a parameter when initializing the bot:
@@ -45,6 +45,6 @@ chatbot.train(conversation)
 response = chatbot.get_response("Tere päevast!")
 print(response) 
 
-process_item = pipelines.DatabasePipeline.process_item
-process_item(self, response)
+#not working yet process_item = pipelines.DatabasePipeline.process_item
+# not working yet process_item(self, response)
 
